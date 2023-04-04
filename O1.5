@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+
+int cataLan(int n)
+{
+	if (n == 1 || n == 2) return 1;
+	else
+	{
+		int C = 0;
+		for (int i = 1; i < n; i++)
+		{
+			C += cataLan(i) * cataLan(n - i);
+		}
+		return C;
+	}
+}
+
+int main()
+{
+	int n;
+	cout << "Nhap n: "; cin >> n;
+	cout << "Ket qua la: " << cataLan(n);
+	return 0;
+}
