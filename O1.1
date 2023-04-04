@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+long tinhGT(int n)
+{
+	if (n == 1) return 1;
+	else return n * tinhGT(n - 1);
+}
+
+int main()
+{
+	int a, b;
+	cout << "Nhap a,b: " << endl; 
+	cin >> a >> b;
+	long TuSo = tinhGT(a) + tinhGT(b);
+	long MauSo = tinhGT(a + b);
+	double K = (double)TuSo / MauSo;
+	cout << "Ket qua la: " << K;
+	return 0;
+}
