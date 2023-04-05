@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+float F(float x, int n)
+{
+	if (n == 0) return 1;
+	else return (x * F(x, n - 1)) / n;
+}
+int main()
+{
+	float x;
+	int n;
+	cout << "Nhap x: "; cin >> x;
+	cout << "Nhap n: "; cin >> n;
+	cout << "F(x,n) = " << F(x, n) << endl;
+	return 0;
+}
