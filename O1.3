@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int SoChuSo(int n)
+{
+	if (n < 10) return 1;
+	else return 1 + SoChuSo(n / 10);
+}
+
+int main()
+{
+	int n;
+	cout << "Nhap n: "; cin >> n;
+	cout << "So " << n << " co " << SoChuSo(n) << " chu so";
+	return 0;
+}
